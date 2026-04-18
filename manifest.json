@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "X Badge Blocker",
+  "version": "2.1",
+  "description": "Hides unwanted badges on X / Twitter.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://unavatar.io/*",
+    "*://*.twimg.com/*"
+  ],
+  "action": {
+    "default_popup": "config.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*", "*://*.x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
